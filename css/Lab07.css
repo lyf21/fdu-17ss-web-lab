@@ -1,0 +1,32 @@
+* {
+    margin: 3px auto;
+}
+body {
+    text-align: center;
+}
+select, button {
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+}
+input {
+    width: 140px;
+}
+table {
+    border: 0px;
+}
+th {
+    background-color: grey;
+    color: whitesmoke;
+}
+tr:nth-child(odd){
+    background-color: lightgrey;
+}
+td {
+    padding: 0 0.5em;
+    font-family: "Times New Roman";
+}
+
+#commit {
+    display: none;
+}

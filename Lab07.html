@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/Lab07.css" rel="stylesheet">
+    <script src="js/Lab07.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <select onchange="selector1(this.value)">
+        <option value="1" selected>SELECT ONE</option>
+        <option value="2">CREATE TABLE</option>
+        <option value="3">ADD ROW</option>
+        <option value="4">DELETE ROW</option>
+        <option value="5">DELETE TABLE</option>
+    </select>
+
+    <div id="container1">
+    </div>
+    <div id="container2">
+        <div id="container21"></div>
+    </div>
+    <div id="container3">
+    </div>
+    <div id="container4">
+    </div>
+    <div id="container5">
+    </div>
+
+    <button id="commit" onclick="displayThead()">commit</button>
+
+    <select id="select2">
+        <option>SELECT (default: last created)</option>
+    </select>
+    <section id="tableList">
+        <!--<table id="preview">-->
+            <!--<tr>-->
+            <!--<th>Attr1</th><th>Attr2</th>-->
+            <!--</tr>-->
+            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
+            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
+            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
+            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
+        <!--</table>-->
+    </section>
+
+</body>
+</html>
