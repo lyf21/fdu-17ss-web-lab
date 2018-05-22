@@ -14,12 +14,13 @@ input {
 }
 table {
     border: 0px;
+    margin: 0 auto;
 }
 th {
     background-color: grey;
     color: whitesmoke;
 }
-tr:nth-child(odd){
+tr:nth-child(odd) td{
     background-color: lightgrey;
 }
 td {

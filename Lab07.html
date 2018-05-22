@@ -16,33 +16,17 @@
         <option value="5">DELETE TABLE</option>
     </select>
 
-    <div id="container1">
-    </div>
-    <div id="container2">
-        <div id="container21"></div>
-    </div>
-    <div id="container3">
-    </div>
-    <div id="container4">
-    </div>
-    <div id="container5">
-    </div>
+    <div id="container"></div>
 
     <button id="commit" onclick="displayThead()">commit</button>
 
-    <select id="select2">
-        <option>SELECT (default: last created)</option>
+    <select id="select2" onchange="selector2()">
+        <option value="0">SELECT (default: last created)</option>
     </select>
     <section id="tableList">
-        <!--<table id="preview">-->
-            <!--<tr>-->
-            <!--<th>Attr1</th><th>Attr2</th>-->
-            <!--</tr>-->
-            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
-            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
-            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
-            <!--<tr><td>bfdbfd</td><td>bfdbfd</td></tr>-->
-        <!--</table>-->
+        <table id="preview">
+
+        </table>
     </section>
 
 </body>

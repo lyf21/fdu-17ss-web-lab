@@ -7,7 +7,6 @@ function generateLink($url, $label, $class) {
    return $link;
 }
 
-
 function outputPostRow($number)  {
     include("travel-data.inc.php");
 	$postId = "postId". $number;
@@ -18,25 +17,17 @@ function outputPostRow($number)  {
 	$title = "title". $number;
 	$excerpt = "excerpt". $number;
 	$reviewsNum = "reviewsNum". $number;
-	$reviewsRating = "reviewsRating". $number;
-	$ratingCode = "";
-	for($x = 0; $x < $$reviewsRating; $x ++){
-		$ratingCode = $ratingCode. '<img src="images/star-gold.svg" width="16" />';
-	}
-	for($x = 0; $x < 5 - $$reviewsRating; $x ++){
-		$ratingCode = $ratingCode.'<img src="images/star-white.svg" width="16" />';
-	}
-	$ratingCode = $ratingCode. ' ';
-	echo '<div class="row"><div class="col-md-4"><a href="post.php?id='. $$postId. '" class="">
-<img src="images/'. $$thumb. '" alt="'. $$title. '" class="img-responsive"/>
-</a></div>
+	$reviewsRating = "reviewsRating". $number;	//这是一个字符串，拼出来一个identifier对应的字符串
+	$ratingCode = constructRating($$reviewsRating);
+	$linkCode = generateLink("post.php?id=".$$postId, '<img src="images/'. $$thumb. '" alt="'. $$title. '" class="img-responsive"/>', "");
+	echo '<div class="row"><div class="col-md-4">'.$linkCode.'</div>
 <div class="col-md-8"> 
 <h2>'. $$title. '</h2>
 <div class="details">Posted by 
 <a href="user.php?id='. $$userId. '" class="">'. $$userName. '</a>
 <span class="pull-right">'. $$date. '</span>
 <p class="ratings">
-'. $ratingCode. $$reviewsNum. ' Reviews</p></div>
+'. $ratingCode. ' '.$$reviewsNum. ' Reviews</p></div>
 <p class="excerpt">'. $$excerpt. '</p>
 <p>
 <a href="post.php?id='. $$postId. '" class="btn btn-primary btn-sm">Read more</a></p></div></div><hr/>
